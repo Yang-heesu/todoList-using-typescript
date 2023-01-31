@@ -9,13 +9,15 @@ interface TodoListItemProps {
 	itemCompleted: boolean;
 	itemText: string;
 	onClickTodoListItemCheckBox(id: number): void;
+	onClickTodoListItemDeleteButton(id: number): void;
 }
 
 const TodoListItem = ({
 	id,
 	itemCompleted,
 	itemText,
-	onClickTodoListItemCheckBox
+	onClickTodoListItemCheckBox,
+	onClickTodoListItemDeleteButton
 }: TodoListItemProps) => {
   return (
     <div className="todoListContent">
@@ -26,7 +28,8 @@ const TodoListItem = ({
 		<TodoListItemText itemCompleted={itemCompleted}>
 			{itemText}
 		</TodoListItemText>
-		<TodoListItemDeleteButton/>
+		<TodoListItemDeleteButton
+			onClick={() => onClickTodoListItemDeleteButton(id)}/>
 	</div>
   );
 }

@@ -12,8 +12,8 @@ const TodoListItemCheckBox = ({
 	onClick
 }: TodoListItemCheckBoxProps) => {
   return (
-    <div onClick={onClick}>
-		<input type="checkbox" defaultChecked={itemChecked}/>
+    <div>
+		<input type="checkbox" defaultChecked={itemChecked} onClick={onClick}/>
 	</div>
   );
 }

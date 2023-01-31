@@ -26,15 +26,20 @@ const TodoList = () => {
       item.id === id ? {...item, itemCompleted: !item.itemCompleted} : item
     ));
   }
-  
+
+  const handleClickTodoListItemDeleteButton = (id: number) => {
+    setItemData(itemData.filter(item => item.id !== id));
+  }
   return (
     <div>
       {itemData.map(item => 
-        <TodoListItem 
+        <TodoListItem
+          key={item.id}
           id={item.id}
           itemText = {item.itemText}
           itemCompleted={item.itemCompleted}
           onClickTodoListItemCheckBox={handleClickTodoListItemCheckBox}
+          onClickTodoListItemDeleteButton={handleClickTodoListItemDeleteButton}
         />
       )}
     </div>
