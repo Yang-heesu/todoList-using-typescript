@@ -1,6 +1,6 @@
 import React from "react";
 
-import './todoListItemText.css';
+import './TodoListItemText.css';
 
 interface TodoListItemTextProps {
 	itemCompleted: boolean;
@@ -12,9 +12,9 @@ const TodoListItemText = ({
 	children
 }: TodoListItemTextProps) => {
   return (
-    <div className={`itemText ${itemCompleted ? 'completedItemText' : ''}`}>
+    <span className={`itemText ${itemCompleted ? 'completedItemText' : ''}`}>
       {children}
-    </div>
+    </span>
   );
 }
 

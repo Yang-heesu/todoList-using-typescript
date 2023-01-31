@@ -1,8 +1,10 @@
 import React from "react";
 
-import TodoListItemCheckBox from "./todoListItemCheckBox";
-import TodoListItemText from "./todoListItemText";
-import TodoListItemDeleteButton from "./todoListItemDeleteButton";
+import TodoListItemCheckBox from "./TodoListItemCheckBox";
+import TodoListItemText from "./TodoListItemText";
+import TodoListItemDeleteButton from "./TodoListItemDeleteButton";
+
+import './TodoListItem.css';
 
 interface TodoListItemProps {
 	id: number;
@@ -22,7 +24,6 @@ const TodoListItem = ({
   return (
     <div className="todoListContent">
 		<TodoListItemCheckBox 
-			id={id}
 			itemChecked={itemCompleted}
 			onClick={() => onClickTodoListItemCheckBox(id)}/>
 		<TodoListItemText itemCompleted={itemCompleted}>

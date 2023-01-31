@@ -8,9 +8,9 @@ const TodoListItemDeleteButton = ({
   onClick
 }: TodoListItemDeleteButtonProps) => {
   return (
-    <div>
+    <span>
       <button onClick={onClick}>삭제</button>
-		</div>
+		</span>
   );
 }
 

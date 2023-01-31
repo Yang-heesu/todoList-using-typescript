@@ -11,24 +11,8 @@ interface todoListType {
 
 const TodoList = () => {
   const [inputText, setInputText] = useState<string>(''); //todoList에 추가할 텍스트
-  const [itemData, setItemData] = useState<Array<todoListType>>([
-    {
-      id: 1,
-      itemText: '할일 1',
-      itemCompleted: false,
-    },
-    {
-      id: 2,
-      itemText: '할일 2',
-      itemCompleted: false,
-    },
-    {
-      id: 3,
-      itemText: '완료한 일 1',
-      itemCompleted: true,
-    }
-  ]);
-  const nextId = useRef(4); //현재 데이터의 index
+  const [itemData, setItemData] = useState<Array<todoListType>>([]);
+  const nextId = useRef(0); //현재 데이터의 index
 
   /** 체크박스를 클릭할 때, 체크박스의 checked값을 변경하는 함수 */
   const handleClickTodoListItemCheckBox = (id: number) => {

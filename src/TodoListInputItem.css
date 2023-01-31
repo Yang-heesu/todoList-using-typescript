@@ -1,0 +1,11 @@
+.inputText {
+    width: 500px;
+    height: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.inputButton {
+    width: 100px;
+    height: 30px;
+}
