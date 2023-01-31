@@ -21,12 +21,20 @@ const TodoList = () => {
     }
   ]);
 
+  const handleClickTodoListItemCheckBox = (id: number) => {
+    setItemData(itemData.map(item => 
+      item.id === id ? {...item, itemCompleted: !item.itemCompleted} : item
+    ));
+  }
+  
   return (
     <div>
-      {itemData.map( item => 
+      {itemData.map(item => 
         <TodoListItem 
+          id={item.id}
           itemText = {item.itemText}
           itemCompleted={item.itemCompleted}
+          onClickTodoListItemCheckBox={handleClickTodoListItemCheckBox}
         />
       )}
     </div>

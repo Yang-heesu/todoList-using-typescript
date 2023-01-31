@@ -1,5 +1,7 @@
 import React from "react";
 
+import './todoListItemText.css';
+
 interface TodoListItemTextProps {
 	itemCompleted: boolean;
 	children: React.ReactNode; //태그 사이의 값을 받는데 사용한다.

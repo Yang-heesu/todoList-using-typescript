@@ -1,0 +1,4 @@
+.completedItemText {
+    text-decoration: line-through;
+    color: gray;
+}
